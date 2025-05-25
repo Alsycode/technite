@@ -147,7 +147,7 @@ const MortgageCalculator = () => {
         className="absolute inset-y-0 left-0 p-3 flex items-center pointer-events-none rounded-tl-lg rounded-bl-lg"
         style={{ 
           backgroundColor: errors.mortgageAmount ? 'hsl(4, 69%, 50%)' : 'hsl(61, 70%, 52%)', 
-          color: errors.mortgageAmount ? 'white' : 'gray' 
+          color: errors.mortgageAmount ? 'white' : '#45514c' 
         }}
       >
         <FaPoundSign className="text-base" />
@@ -175,7 +175,7 @@ const MortgageCalculator = () => {
     className="absolute inset-y-0 right-0 p-3 flex items-center pointer-events-none rounded-tr-lg rounded-br-lg"
     style={{ 
       backgroundColor: errors.mortgageTerm ? 'hsl(4, 69%, 50%)' : 'hsl(202, 86%, 94%)', 
-      color: errors.mortgageTerm ? 'white' : 'gray' 
+      color: errors.mortgageTerm ? 'white' : '#45514c' 
     }}
   >
     <span 
@@ -199,7 +199,7 @@ const MortgageCalculator = () => {
         className="absolute inset-y-0 right-0 p-3 flex items-center pointer-events-none rounded-tr-lg rounded-br-lg"
         style={{ 
           backgroundColor: errors.interestRate ? 'hsl(4, 69%, 50%)' : 'hsl(202, 86%, 94%)', 
-          color: errors.interestRate ? 'white' : 'gray' 
+          color: errors.interestRate ? 'white' : '#45514c' 
         }}
       >
         <AiOutlinePercentage className="text-base" />
