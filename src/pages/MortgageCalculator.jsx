@@ -131,83 +131,97 @@ const MortgageCalculator = () => {
           </div>
           {/* Second div */}
           <div>
-            <label className="block text-base font-medium text-slate-500">
-              Mortgage Amount
-              <div className="relative mt-2">
-                <input
-                  type="text"
-                  name="mortgageAmount"
-                  value={formData.mortgageAmount}
-                  onChange={handleInputChange}
-                  style={{ borderBottomLeftRadius: '0.5rem', borderTopLeftRadius: '0.5rem' }}
-                  className="pl-12 pr-4 py-2 w-full border border-slate-300 focus:border-slate-900 rounded-lg outline-none text-base font-medium text-slate-500"
-                  placeholder="Enter mortgage amount"
-                />
-                <div
-                  className="absolute inset-y-0 left-0 p-3 flex items-center pointer-events-none rounded-tl-lg rounded-bl-lg"
-                  style={{ background: errors.mortgageAmount ? 'hsl(4, 69%, 50%)' : 'hsl(61, 70%, 52%)' }}
-                >
-                  <FaPoundSign className="text-base" />
-                </div>
-              </div>
-              {errors.mortgageAmount && (
-                <p className="text-red text-xs sm:text-sm mt-1 font-medium">{errors.mortgageAmount}</p>
-              )}
-            </label>
-          </div>
+  <label className="block text-base font-medium text-slate-500">
+    Mortgage Amount
+    <div className="relative mt-2">
+      <input
+        type="text"
+        name="mortgageAmount"
+        value={formData.mortgageAmount}
+        onChange={handleInputChange}
+        style={{ borderBottomLeftRadius: '0.5rem', borderTopLeftRadius: '0.5rem' }}
+        className="pl-12 pr-4 py-2 w-full border border-slate-300 focus:border-slate-900 rounded-lg outline-none text-base font-medium text-slate-500"
+        placeholder="Enter mortgage amount"
+      />
+      <div
+        className="absolute inset-y-0 left-0 p-3 flex items-center pointer-events-none rounded-tl-lg rounded-bl-lg"
+        style={{ 
+          backgroundColor: errors.mortgageAmount ? 'hsl(4, 69%, 50%)' : 'hsl(61, 70%, 52%)', 
+          color: errors.mortgageAmount ? 'white' : 'gray' 
+        }}
+      >
+        <FaPoundSign className="text-base" />
+      </div>
+    </div>
+    {errors.mortgageAmount && (
+      <p className="text-red text-xs sm:text-sm mt-1 font-medium">{errors.mortgageAmount}</p>
+    )}
+  </label>
+</div>
           {/* Third div */}
           <div className="flex flex-col md:flex-row gap-4 justify-between">
             <div className="w-full md:w-1/2">
               <label className="block text-base font-medium text-slate-500">
                 Mortgage Term
                 <div className="relative mt-2">
-                  <input
-                    type="text"
-                    name="mortgageTerm"
-                    value={formData.mortgageTerm}
-                    onChange={handleInputChange}
-                    className="pl-2 pr-12 py-2 w-full border border-slate-300 focus:border-slate-900 rounded-lg outline-none text-base font-medium text-slate-500"
-                  />
-                  <div
-                    className="absolute inset-y-0 right-0 p-3 flex items-center pointer-events-none rounded-tr-lg rounded-br-lg"
-                    style={{ background: errors.mortgageTerm ? 'hsl(4, 69%, 50%)' : 'hsl(202, 86%, 94%)' }}
-                  >
-                    <span className="text-base font-medium text-slate-500">years</span>
-                  </div>
-                </div>
+  <input
+    type="text"
+    name="mortgageTerm"
+    value={formData.mortgageTerm}
+    onChange={handleInputChange}
+    className="pl-2 pr-12 py-2 w-full border border-slate-300 focus:border-slate-900 rounded-lg outline-none text-base font-medium text-slate-500"
+  />
+  <div
+    className="absolute inset-y-0 right-0 p-3 flex items-center pointer-events-none rounded-tr-lg rounded-br-lg"
+    style={{ 
+      backgroundColor: errors.mortgageTerm ? 'hsl(4, 69%, 50%)' : 'hsl(202, 86%, 94%)', 
+      color: errors.mortgageTerm ? 'white' : 'gray' 
+    }}
+  >
+    <span 
+      className="text-base font-medium text-slate-500" 
+      style={{ color: 'inherit' }}
+    >
+      years
+    </span>
+  </div>
+</div>
                 {errors.mortgageTerm && (
                   <p className="text-red text-xs sm:text-sm mt-1 font-medium">{errors.mortgageTerm}</p>
                 )}
               </label>
             </div>
             <div className="w-full md:w-1/2">
-              <label className="block text-base font-medium text-slate-500">
-                Interest Rate
-                <div className="relative mt-2">
-                  <div
-                    className="absolute inset-y-0 right-0 p-3 flex items-center pointer-events-none rounded-tr-lg rounded-br-lg"
-                    style={{ background: errors.interestRate ? 'hsl(4, 69%, 50%)' : 'hsl(202, 86%, 94%)' }}
-                  >
-                    <AiOutlinePercentage className="text-base text-slate-500" />
-                  </div>
-                  <input
-                    type="text"
-                    name="interestRate"
-                    value={formData.interestRate}
-                    onChange={handleInputChange}
-                    className="pl-2 pr-12 py-2 w-full border border-slate-300 focus:border-slate-900 rounded-lg outline-none text-base font-medium text-slate-500"
-                  />
-                </div>
-                {errors.interestRate && (
-                  <p className="text-red text-xs sm:text-sm mt-1 font-medium">{errors.interestRate}</p>
-                )}
-              </label>
-            </div>
+  <label className="block text-base font-medium text-slate-500">
+    Interest Rate
+    <div className="relative mt-2">
+      <div
+        className="absolute inset-y-0 right-0 p-3 flex items-center pointer-events-none rounded-tr-lg rounded-br-lg"
+        style={{ 
+          backgroundColor: errors.interestRate ? 'hsl(4, 69%, 50%)' : 'hsl(202, 86%, 94%)', 
+          color: errors.interestRate ? 'white' : 'gray' 
+        }}
+      >
+        <AiOutlinePercentage className="text-base" />
+      </div>
+      <input
+        type="text"
+        name="interestRate"
+        value={formData.interestRate}
+        onChange={handleInputChange}
+        className="pl-2 pr-12 py-2 w-full border border-slate-300 focus:border-slate-900 rounded-lg outline-none text-base font-medium text-slate-500"
+      />
+    </div>
+    {errors.interestRate && (
+      <p className="text-red text-xs sm:text-sm mt-1 font-medium">{errors.interestRate}</p>
+    )}
+  </label>
+</div>
           </div>
           {/* Fourth div */}
           <div className="flex flex-col gap-2">
             <p className="text-base font-medium text-slate-500">Mortgage Type</p>
-            <div className="px-4 py-2 bg-slate-100 border rounded-lg border-slate-300">
+            <div className="px-4 py-2 bg-[#fafae2] border rounded-lg border-slate-300">
               <label className="flex items-center text-base font-medium text-slate-500">
                 <input
                   type="radio"
@@ -215,12 +229,13 @@ const MortgageCalculator = () => {
                   value="repayment"
                   checked={formData.mortgageType === 'repayment'}
                   onChange={handleRadioChange}
-                  className="radio radio-lime mr-2"
+                  className="radio  mr-2"
+                  style={{ accentColor: '#d1d846', borderColor: '#d1d846' }}
                 />
                 Repayment
               </label>
             </div>
-            <div className="px-4 py-2 bg-slate-100 border rounded-lg border-slate-300">
+            <div className="px-4 py-2 bg-[#fafae2] border rounded-lg border-slate-300">
               <label className="flex items-center text-base font-medium text-slate-500">
                 <input
                   type="radio"
@@ -228,7 +243,8 @@ const MortgageCalculator = () => {
                   value="interest-only"
                   checked={formData.mortgageType === 'interest-only'}
                   onChange={handleRadioChange}
-                  className="radio radio-lime mr-2"
+                  className="mr-2"
+                  style={{ accentColor: '#d1d846', borderColor: '#d1d846' }}
                 />
                 Interest Only
               </label>
